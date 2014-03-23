@@ -9,7 +9,7 @@ import com.test.dao.ICustomerDao;
 import com.test.entity.Customer;
 
 /**
- * ¶Ô¿Í»§½øÐÐ¼òµ¥µÄ Ôù¡¢É¾¡¢¸ÄºÍ²é
+ * ï¿½Ô¿Í»ï¿½ï¿½ï¿½ï¿½Ð¼òµ¥µï¿½ ï¿½ï¿½É¾ï¿½ï¿½ï¿½ÄºÍ²ï¿½
  * @author Light
  *
  */
@@ -38,13 +38,13 @@ public class CustomerDaoImpl extends JdbcDaoSupport implements ICustomerDao {
 
 	@Override
 	public List<Map<String,Object>> select() {
-		String sql = "select * from person";
+		String sql = "select * from customer";
 		return super.getJdbcTemplate().queryForList(sql);
 	}
 
 	@Override
 	public Customer selectByid(Customer customer) {
-		String sql = "select * from person where id = ?";
+		String sql = "select * from customer where id = ?";
 		List<Map<String,Object>> rows = super.getJdbcTemplate().queryForList(sql, new Object[]{customer.getId()});
 		Customer person = new Customer();
 		for(Map<String, Object> row : rows){

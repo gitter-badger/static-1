@@ -20,7 +20,7 @@ public class AdminDaoImpl extends JdbcDaoSupport implements IAdminDao {
 			@Override
 			public Admin extractData(ResultSet arg0) throws SQLException, DataAccessException {
 				Admin admin = null;
-				if(arg0 != null && arg0.getRow() > 0){
+				if(arg0.next()){
 					admin = new Admin();
 					admin.setId(arg0.getInt("id"));
 					admin.setName(arg0.getString("name"));
