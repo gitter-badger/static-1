@@ -14,7 +14,7 @@ h4{
 <h4>${ msg }</h4>
 <form action="admin.htm?action=login" method="post">
 	Username：<input type="text" name="name" value="${ user.name }">
-	Password：<input type="text" name="password" />
+	Password：<input type="password" name="password" />
 	<input type="submit" value="submit"/>
 </form>
 </body>
