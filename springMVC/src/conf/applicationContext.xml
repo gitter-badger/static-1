@@ -49,10 +49,29 @@
 		<property name="adminSer" ref="adminService"></property>
 		<property name="methodNameResolver" ref="methodNameResolver"></property>
 	</bean>
-	
 	<bean name="methodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
 		<property name="paramName" value="action"/>
 	</bean>
+	
+	<!-- Interceptor -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/customer.htm"/>
+			<bean class="com.test.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	
+<!-- 	<bean id="handlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"> -->
+<!-- 		<property name="interceptors"> -->
+<!-- 			<list> -->
+<!-- 				<ref bean="loginInterceptor"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="loginInterceptor" class="com.test.interceptor.LoginInterceptor"> -->
+<!-- 		<property name="mappingURL" value="*.action=list"></property> -->
+<!-- 	</bean> -->
 	
 	<context:property-placeholder location="classpath:/conf/jdbc.properties"/>
 </beans>
