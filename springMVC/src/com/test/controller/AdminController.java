@@ -28,11 +28,12 @@ public class AdminController extends MultiActionController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		String path = null;
 		if(adm != null){
-			map.put("user", adm);
-			path = "/WEB-INF/jsp/customer/customer.htm?action=list";
+			map.put("admin", adm);
+			request.getSession().setAttribute("admin", admin);
+			path = "redirect:/customer.htm?action=list";
 		}else{
 			map.put("msg", "用户名或密码错误！");
-			map.put("user", admin);
+			map.put("admin", admin);
 			path = "login.jsp";
 		}
 		return new ModelAndView(path, map);
