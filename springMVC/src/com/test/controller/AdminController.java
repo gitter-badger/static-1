@@ -31,7 +31,7 @@ public class AdminController extends MultiActionController {
 			map.put("user", adm);
 			path = "/WEB-INF/jsp/customer/customer.htm?action=list";
 		}else{
-			map.put("msg", "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡");
+			map.put("msg", "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼");
 			map.put("user", admin);
 			path = "login.jsp";
 		}
