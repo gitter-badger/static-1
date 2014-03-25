@@ -10,7 +10,7 @@
 	
 	#header{ width:100%; height:40px; }
 	
-	#title{ margin-left:45%; font-size:40px; font-weight:bold; text-shadow:5px 1px 5px #FF0000; }
+	#title{ margin-left:45%; font-size:40px; font-weight:bold; text-shadow:5px 1px 5px blue; }
 	
 	#welcome{ float:right; font-weight:bold; color:blue; }
 	
